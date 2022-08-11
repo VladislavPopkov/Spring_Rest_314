@@ -18,7 +18,7 @@ function getAllUsers() {
             success: function (roles) {
                 roleList = roles;
             }
-        });
+        });//лл
     });
 }
 
