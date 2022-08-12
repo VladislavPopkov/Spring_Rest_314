@@ -42,10 +42,10 @@ public class UserRestController {
         return new ResponseEntity<>(roles, HttpStatus.OK);
     }
 
-    @PostMapping(value = "admin")
-    public ResponseEntity<User> addNewUser(@RequestBody User user) {
+    @PostMapping(value = "admin") //просто прихожит пост запрос на адресе
+    public ResponseEntity<User> addNewUser(@RequestBody User user) { //джексон конвертирует наш обект в JSON и дает клиенту
         userService.addUser(user);
-        return new ResponseEntity<>(user, HttpStatus.OK);
+        return new ResponseEntity<>(user, HttpStatus.OK); //стандартный способ ответа клиенту, все ОК с пустым телом
     }
 
     @PutMapping("admin")

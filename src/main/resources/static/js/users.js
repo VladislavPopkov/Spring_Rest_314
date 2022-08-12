@@ -1,10 +1,9 @@
-let roleList = []; // глобальная переменная для хранения массива ролей
+let roleList = [];
 
-//вызов метода получения всех юзеров и заполнения таблицы
 getAllUsers();
 
 function getAllUsers() {
-    $.getJSON("http://localhost:8080/admin/allUsers", function (data) { // по ссылки получаем юзеров и добавляем их в дата
+    $.getJSON("http://localhost:8080/admin/allUsers", function (data) {
         let rows = '';
         $.each(data, function (key, user) {
             rows += createRows(user);
@@ -18,7 +17,7 @@ function getAllUsers() {
             success: function (roles) {
                 roleList = roles;
             }
-        });//лл
+        });
     });
 }
 
