@@ -38,8 +38,8 @@ public class Init {
         adminRoles.add(roleAdmin);
         adminRoles.add(roleUser);
 
-        User user = new User("User", "Userov", 18,  "user@mail.ru", "$2a$12$I2Jaja1tiG0OLLA8G9SrOO225e93KICb9qknGyO8Lgs5/CIMbxWV6", userRoles); //1234
-        User admin = new User("Admin", "Adminov", 25,  "admin@mail.ru", "$2a$12$T69GNWh63fXfM7RuAcBZm.ZrZo9HjEJkf0cwpg8LWAc8XEM16Lg2e", adminRoles); //4321
+        User user = new User("User", "User", 22,  "user@mail.ru", "$2a$12$JOGv6KWPsSj/BD.Ta57jvOFsZgdG1Ry2ocBA3VmDB5Diy5eqKbQui", userRoles); //user
+        User admin = new User("Admin", "Admin", 21,  "admin@mail.ru", "$2a$12$GW0AKxFcVByNopzjj3cHz.7ztnFXi59eh90ZtKpobkV1t/NquSlVq", adminRoles); //само собой admin
 
 
         userRepository.save(user);

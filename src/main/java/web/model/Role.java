@@ -16,16 +16,16 @@ public class Role implements GrantedAuthority {
     @Column(name = "role")
     private String name;
 
-    @JsonIgnore
+    @JsonIgnore // просто данное поле игнорируется при чтении/записи (для джексона)
     @ManyToMany(mappedBy = "roles")
     private Set<User> users;
+
+    public Role() {
+    }
 
     public Role(String name) {
         this.id = id;
         this.name = name;
-    }
-
-    public Role() {
     }
 
     public Long getId() {

@@ -11,7 +11,7 @@ import web.service.UserService;
 
 import java.util.List;
 
-@RestController
+@RestController // просто controller + response body
 @RequestMapping(value = "/")
 public class UserRestController {
 
